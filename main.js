@@ -24,12 +24,40 @@
 // arr
 var username =["ranu","ravi","yash","push","raushan"]
 // convert
-localStorage.setItem("username",username)
 
+username=JSON.stringify(username)
+
+// set
+localStorage.setItem("username",username)
+// get
+var arrData=localStorage.getItem("username")
+arrData=JSON.parse(arrData)
 
 
 // obj
 var obj={"name":"ranu","age":21}
 
 // convert
+
+obj=JSON.stringify(obj)
+
+
+// set
+
 localStorage.setItem("user",obj)
+// get
+var objData=localStorage.getItem("user")
+objData=JSON.parse(objData)
+console.log(objData);
+
+
+
+
+
+
+
+var  displayingData=document.querySelector("body")
+
+displayingData.append(arrData,objData)
+
+
